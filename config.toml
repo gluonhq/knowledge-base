@@ -1,0 +1,44 @@
+baseURL = "http://localhost:1313/knowledge-base"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Gluon Knowledge Base"
+theme = "hugo-theme-learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+[params]
+  editURL = "https://github.com/gluonhq/knowledge-base/edit/master/content/"
+  description = "Gluon Knowledge Base"
+  author = "Abhinay Agarwal"
+  showVisitedLinks = false
+
+  themeVariant = "mine"
+  # doc constants
+  JDK_VERSION = "14"
+  JFX_VERSION = "14"
+  JFX_GRADLE_PLUGIN = "0.0.8"
+  JFX_MAVEN_PLUGIN = "0.0.4"
+  JFX_MAVEN_ARCH = "0.0.1"
+  JLINK_PLUGIN = "2.12.0"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "Getting Started with JavaFX"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Gluon GitHub repositories"
+identifier = "ds"
+url = "https://github.com/gluonhq/"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> JavaFX Long Term Support"
+identifier = "mailing-list"
+url = "https://gluonhq.com/services/javafx-support/"
+weight = 20

@@ -1,0 +1,5 @@
+{{ $assetBusting := not .Site.Params.disableAssetsBusting }}
+<link href="{{"css/tabs.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+<!--
+<script src="{{ .Site.BaseURL }}/js/ga-header.js" type="application/javascript"></script>
+-->
