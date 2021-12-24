@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/knowledge-base"
+baseURL = "http://gluonhq.github.io/knowledge-base"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
