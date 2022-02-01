@@ -30,7 +30,7 @@ detected_modules=`$JAVA_HOME/bin/jdeps \
 
 Apart from those detected modules, you may specify additional modules, e.g.
 ```
-manual_modules=,jdk.crypto.ec,jdk.localedata
+manual_modules=jdk.crypto.ec,jdk.localedata
 ```
 
 Next, you can create a runtime continaining those modules:
@@ -41,14 +41,14 @@ $JAVA_HOME/bin/jlink \
   --no-man-pages  \
   --compress=2  \
   --strip-debug \
-  --add-modules "${detected_modules}${manual_modules}" \
+  --add-modules "${detected_modules},${manual_modules}" \
   --include-locales=en \
   --output target/java-runtime
 ```
 
 ## Packaging
 
-The following command creates a native installer:
+The following command creates a JVM installer:
 
 ```
 $JAVA_HOME/bin/jpackage \
