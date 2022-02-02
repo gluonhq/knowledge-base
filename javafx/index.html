@@ -7,20 +7,20 @@
 <meta name=author content="Abhinay Agarwal">
 <link rel=icon href=/knowledge-base/images/favicon.png type=image/png>
 <title>JavaFX :: Getting Started with JavaFX</title>
-<link href=/knowledge-base/css/nucleus.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/fontawesome-all.min.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/hybrid.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/featherlight.min.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/perfect-scrollbar.min.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/auto-complete.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/atom-one-dark-reasonable.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/theme.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/tabs.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/hugo-theme.css?1640343736 rel=stylesheet>
-<link href=/knowledge-base/css/theme-mine.css?1640343736 rel=stylesheet>
-<script src=/knowledge-base/js/jquery-3.3.1.min.js?1640343736></script>
+<link href=/knowledge-base/css/nucleus.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/fontawesome-all.min.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/hybrid.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/featherlight.min.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/perfect-scrollbar.min.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/auto-complete.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/atom-one-dark-reasonable.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/theme.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/tabs.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/hugo-theme.css?1643807183 rel=stylesheet>
+<link href=/knowledge-base/css/theme-mine.css?1643807183 rel=stylesheet>
+<script src=/knowledge-base/js/jquery-3.3.1.min.js?1643807183></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-<link href=/knowledge-base/css/tabs.css?1640343736 rel=stylesheet>
+<link href=/knowledge-base/css/tabs.css?1643807183 rel=stylesheet>
 </head>
 <body data-url=/knowledge-base/javafx/>
 <nav id=sidebar>
@@ -35,10 +35,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/knowledge-base/js/lunr.min.js?1640343736></script>
-<script type=text/javascript src=/knowledge-base/js/auto-complete.js?1640343736></script>
+<script type=text/javascript src=/knowledge-base/js/lunr.min.js?1643807183></script>
+<script type=text/javascript src=/knowledge-base/js/auto-complete.js?1643807183></script>
 <script type=text/javascript>var baseurl="http://gluonhq.github.io/knowledge-base"</script>
-<script type=text/javascript src=/knowledge-base/js/search.js?1640343736></script>
+<script type=text/javascript src=/knowledge-base/js/search.js?1643807183></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -55,6 +55,13 @@ active">
 <a href=/knowledge-base/javafx/>
 <b>1. </b>JavaFX
 </a>
+<ul>
+<li data-nav-id=/knowledge-base/javafx/packaging/ title=Packaging class=dd-item>
+<a href=/knowledge-base/javafx/packaging/>
+<b>1.1. </b>Packaging
+</a>
+</li>
+</ul>
 </li>
 <li data-nav-id=/knowledge-base/native-image/ title="Native Image" class=dd-item>
 <a href=/knowledge-base/native-image/>
@@ -114,23 +121,23 @@ active">
 </div>
 <div id=navigation>
 <a class="nav nav-prev" href=/knowledge-base/ title="Gluon Knowledge Base"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/knowledge-base/native-image/ title="Native Image" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href=/knowledge-base/javafx/packaging/ title=Packaging style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/knowledge-base/js/clipboard.min.js?1640343736></script>
-<script src=/knowledge-base/js/perfect-scrollbar.min.js?1640343736></script>
-<script src=/knowledge-base/js/perfect-scrollbar.jquery.min.js?1640343736></script>
-<script src=/knowledge-base/js/jquery.sticky.js?1640343736></script>
-<script src=/knowledge-base/js/featherlight.min.js?1640343736></script>
-<script src=/knowledge-base/js/highlight.pack.js?1640343736></script>
+<script src=/knowledge-base/js/clipboard.min.js?1643807183></script>
+<script src=/knowledge-base/js/perfect-scrollbar.min.js?1643807183></script>
+<script src=/knowledge-base/js/perfect-scrollbar.jquery.min.js?1643807183></script>
+<script src=/knowledge-base/js/jquery.sticky.js?1643807183></script>
+<script src=/knowledge-base/js/featherlight.min.js?1643807183></script>
+<script src=/knowledge-base/js/highlight.pack.js?1643807183></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/knowledge-base/js/modernizr.custom-3.6.0.js?1640343736></script>
-<script src=/knowledge-base/js/learn.js?1640343736></script>
-<script src=/knowledge-base/js/hugo-learn.js?1640343736></script>
-<script src=/knowledge-base/mermaid/mermaid.js?1640343736></script>
+<script src=/knowledge-base/js/modernizr.custom-3.6.0.js?1643807183></script>
+<script src=/knowledge-base/js/learn.js?1643807183></script>
+<script src=/knowledge-base/js/hugo-learn.js?1643807183></script>
+<script src=/knowledge-base/mermaid/mermaid.js?1643807183></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
