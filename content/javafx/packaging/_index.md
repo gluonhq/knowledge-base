@@ -56,7 +56,7 @@ $JAVA_HOME/bin/jpackage \
 --dest target/installer \
 --input target/installer/input/libs \
 --name ${APP_NAME} \
---main-class ${LAUNCHER_CLASS} \
+--main-class ${MAIN_CLASS} \
 --main-jar ${MAIN_JAR} \
 --java-options -Xmx2048m \
 --runtime-image target/java-runtime \
@@ -75,7 +75,7 @@ $JAVA_HOME/bin/jpackage \
 --dest target/installer \
 --input target/installer/input/libs \
 --name ${APP_NAME} \
---main-class ${LAUNCHER_CLASS} \
+--main-class ${MAIN_CLASS} \
 --main-jar ${MAIN_JAR} \
 --java-options -Xmx2048m \
 --runtime-image target/java-runtime \
