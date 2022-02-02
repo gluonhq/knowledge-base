@@ -7,17 +7,17 @@ pre = "<b>1.1. </b>"
 
 # Packaging
 
-Using `jpackage`, a JavaFX application can easily be transformed into a native application.
-The approach discussed in this section results in a native application that comes with a
-bundled Java Virtual Machine (JVM) and a set of Java Modules that are needed to run the
-application.
+Using [jpackage](https://docs.oracle.com/en/java/javase/17/docs/specs/man/jpackage.html),
+a Java/FX application can easily be transformed into a package/installer in a platform-specific format.
+The approach discussed in this section results in a package that comes with a bundled 
+Java Virtual Machine (JVM) and a set of Java Modules that are needed to run the application.
 This is different from the approach where the `gluonfx` plugin is used to create a native
 image that does not contain a JVM or the required modules, as those are compiled ahead of
 time (AOT) into the executable.
 
 ## Linking
 
-First, you need to detect what modules your application is using:
+First, find the modules used in the application. This can be done using `jdeps` command:
 ```
 detected_modules=`$JAVA_HOME/bin/jdeps \
   -q \
@@ -26,14 +26,15 @@ detected_modules=`$JAVA_HOME/bin/jdeps \
   --print-module-deps \
   --class-path "target/installer/input/libs/*" \
     target/classes/${MAIN_CLASS}.class`
+echo $detected_modules
 ```
 
-Apart from those detected modules, you may specify additional modules, e.g.
+Apart from those detected modules, any additional modules can be specified manually:
 ```
 manual_modules=jdk.crypto.ec,jdk.localedata
 ```
 
-Next, you can create a runtime continaining those modules:
+Next, a runtime containing these modules can be created by using the `jlink` command:
 ```
 $JAVA_HOME/bin/jlink \
   --strip-native-commands \
@@ -48,7 +49,7 @@ $JAVA_HOME/bin/jlink \
 
 ## Packaging
 
-The following command creates a JVM installer:
+The following command creates a packaged application (or installer bundle) for the platform:
 
 ```
 $JAVA_HOME/bin/jpackage \
@@ -63,11 +64,11 @@ $JAVA_HOME/bin/jpackage \
 --app-version ${APP_VERSION} \
 --vendor "Gluon" \
 --copyright "Copyright © 2021 Gluon" \
-"$@"
+--type ${INSTALLER_TYPE}
 ```
 
-If you want to test the bundle without creating an installer (and installing the installer),
-you can specify the type of the output to be a `app-image` as shown below:
+If you want to test the bundle without creating an installer,
+you can specify the `type` to be a `app-image` as shown below:
 
 ```
 $JAVA_HOME/bin/jpackage \
@@ -83,10 +84,11 @@ $JAVA_HOME/bin/jpackage \
 --vendor "Gluon" \
 --copyright "Copyright © 2021 Gluon" \
 --type app-image
-"$@"
 ```
 
-There are many other options you can specify, check
+`jpackage` comes with an array of options, many of which are platform specific.
+Use the `--help` command to print a list of valid options for the current platform:
+
 ```
 jpackage --help
 ```
